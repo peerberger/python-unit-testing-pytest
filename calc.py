@@ -8,5 +8,3 @@ def total(xs: List[float]) -> float:
         result += x
 
     return result
-
-print('hi')
