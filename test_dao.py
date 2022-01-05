@@ -17,9 +17,11 @@ def dao_connection():
 #     print('cleaning up dao')
 
 
-def test_get_all(dao_connection):
+def test_get_all(dao_connection):  # if no method calls for a fixture, it won't be created
     assert dao_connection.get_all() == [1, 2, 3, 4, 5]
 
 
 def test_get_first(dao_connection):
     assert dao_connection.get_first() == [1]
+
+# https://stackoverflow.com/questions/17571438/test-case-execution-order-in-pytest
